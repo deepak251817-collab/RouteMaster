@@ -1,24 +1,179 @@
-# Logs
-logs
-*.log
+# ==============================================================
+# RouteMaster - Git Ignore
+# Frontend: React + Vite + Tailwind CSS
+# Backend: FastAPI + Python
+# ==============================================================
+
+# ------------------------------
+# Environment variables / secrets
+# ------------------------------
+.env
+.env.*
+!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.secret
+secrets/
+credentials/
+private/
+
+# ------------------------------
+# Node / JavaScript
+# ------------------------------
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Vite / build output
+dist/
+dist-ssr/
+.vite/
 *.local
 
-# Editor directories and files
-.vscode/*
+# Coverage / test output
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+
+# ------------------------------
+# Python / FastAPI
+# ------------------------------
+.venv/
+venv/
+env/
+ENV/
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.tox/
+.nox/
+*.egg-info/
+.eggs/
+build/
+site/
+
+# ------------------------------
+# Logs / temporary files
+# ------------------------------
+logs/
+*.log
+*.tmp
+*.temp
+*.cache
+.tmp/
+tmp/
+
+# ------------------------------
+# IDE / editor files
+# ------------------------------
+.vscode/
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+
+# Visual Studio / Windows IDE files
 *.suo
-*.ntvs*
+*.user
+*.userosscache
+*.sln.docstates
+*.csproj.user
 *.njsproj
-*.sln
-*.sw?
+*.ntvs*
+
+# ------------------------------
+# OS generated files
+# ------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ------------------------------
+# Personal / private project files
+# ------------------------------
+private-notes/
+personal-notes/
+personal/
+private/
+notes-private/
+*.private.*
+*.personal.*
+*_private.*
+*_personal.*
+
+# Local exports / scratch data
+scratch/
+local-data/
+local-data.*
+*.local.json
+*.local.yaml
+*.local.yml
+
+# ------------------------------
+# Certificates / private keys
+# ------------------------------
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+
+# ------------------------------
+# Database / local storage files
+# ------------------------------
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+
+# ------------------------------
+# Archives generated locally
+# Keep source files only; do not commit project ZIP backups.
+# ------------------------------
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# ------------------------------
+# Generated frontend assets
+# ------------------------------
+*.map
+
+# ------------------------------
+# Optional local deployment files
+# ------------------------------
+.vercel/
+
+# ------------------------------
+# Miscellaneous
+# ------------------------------
+*.bak
+*.old
+*.orig
+*.rej
