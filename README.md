@@ -63,6 +63,5 @@ RouteMaster/
 * Dynamic obstacles
 
 ## 👨‍💻 Project
-Built as a project to explore data structures, pathfinding algorithms, warehouse optimization, and modern web development.
 
 Built as a project to explore **data structures, pathfinding algorithms, warehouse optimization, and modern web development**.
