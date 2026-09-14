@@ -1,50 +1,68 @@
-# RouteMaster Order Picker
+# RouteMaster 🚀
 
-RouteMaster Order Picker is a warehouse route-planning app with a React + Vite frontend and a FastAPI backend exposed as a Vercel Python function.
+**Intelligent Warehouse Route Optimization & Order Picking System**
 
-## What it does
+RouteMaster is a web-based warehouse navigation system that calculates and visualizes efficient routes for order picking. It supports interactive warehouse layouts, obstacle handling, BFS pathfinding, voice controls, route animation, and 2D/3D visualization.
 
-- Edit a warehouse grid by painting obstacles, setting a start point, and adding targets.
-- Import or export the layout as JSON.
-- Calculate a route that avoids obstacles and visits each target.
-- View the route in 2D, 3D, or worker-focused layouts.
+## ✨ Features
 
-## Project Layout
+* 🧭 BFS-based route planning
+* 🗺️ Interactive warehouse grid
+* 🚧 Obstacles and configurable layouts
+* 🎙️ Voice-based controls
+* 🎬 Animated route visualization
+* 👷 Worker navigation mode
+* 📦 JSON import/export
+* 🏭 2D and 3D warehouse visualization
+* 📱 Responsive interface
 
-- `src/` contains the React UI.
-- `src/components/` contains the editor, animator, and view components.
-- `api/index.py` contains the FastAPI route solver.
-- `vercel.json` wires the frontend and Python function together for deployment.
+## 🛠️ Tech Stack
 
-## Run Locally
+**Frontend:** React, Vite, Tailwind CSS, Three.js
+**Backend:** Python, FastAPI
+**Algorithm:** Breadth-First Search (BFS)
 
-1. Install dependencies with `npm install`.
-2. Start the frontend with `npm run dev`.
-3. Build for production with `npm run build`.
+## 🚀 Run Locally
 
-The API is served from `/api` and `/api/route` in development and on Vercel.
+### Backend
 
-## API
-
-### POST /api/route
-
-Request body:
-
-- `grid`: 2D array using `0` for walkable cells, `1` for obstacles, and `2` for targets.
-- `start`: `[row, col]` start coordinate.
-- `targets`: optional list of target coordinates.
-
-Response:
-
-```json
-{
-  "total_steps": 12,
-  "path": [[0, 0], [0, 1], [1, 1]],
-  "targets_collected": 2
-}
+```bash
+cd backend
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn main:app --reload
 ```
 
-## Notes
+### Frontend
 
-- The solver uses BFS for shortest segments and a nearest-target greedy order.
-- Generated folders like `dist/`, `node_modules/`, and Python `__pycache__/` should stay untracked.
+```bash
+npm install
+npm run dev
+```
+
+Open the development URL shown by Vite in your browser.
+
+## 📁 Project Structure
+
+```text
+RouteMaster/
+├── backend/       # FastAPI backend
+├── src/           # React frontend
+├── public/        # Static assets
+├── package.json
+└── README.md
+```
+
+## 📌 Future Improvements
+
+* A* pathfinding
+* Multi-order optimization
+* Multiple worker/robot routing
+* Route analytics
+* Dynamic obstacles
+
+## 👨‍💻 Project
+Built as a project to explore data structures, pathfinding algorithms, warehouse optimization, and modern web development.
+
+Built as a project to explore **data structures, pathfinding algorithms, warehouse optimization, and modern web development**.
